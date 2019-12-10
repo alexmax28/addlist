@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class='app'> 
+        <h1>輸入清單</h1>
+        <input type="text" v-model='newlist' @keyup.enter='addlist(newlist)'>
+
+        <ul>
+            <li v-for='list in lists'>
+                {{list.content}} - <a href="" @click.prevent='del(list)'>刪除</a>
+            </li>
+        </ul>
+
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="all.js"></script>
+</body>
+</html>
